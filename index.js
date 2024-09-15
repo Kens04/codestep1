@@ -19,3 +19,16 @@ const hamburger = document.querySelector('.header');
 hamburger.addEventListener('click', function() {
   this.classList.toggle('open');
 });
+
+let fadeInTarget = document.querySelectorAll('.fade-in');
+window.addEventListener('scroll', () => {
+  for (let i = 0; i < fadeInTarget.length; i++){
+    const rect = fadeInTarget[i].getBoundingClientRect().top;
+    const scroll = window.pageYOffset || document.documentElement.scrollTop;
+    const offset = rect + scroll;
+    const windowHeight = window.innerHeight;
+    if (scroll > offset - windowHeight + 150) {
+      fadeInTarget[i].classList.add('scroll-in');
+    }
+  }
+});

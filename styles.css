@@ -188,6 +188,18 @@ header.open .hamburger__menu {
 .feature-card__item {
   box-shadow: 0 0 8px 3px #ccc;
 }
+.feature-card__image.fade-in {
+  opacity: 0;
+  transition-duration: 1s;
+  transition-property: opacity, transform;
+}
+.feature-card__image.fade-in-up {
+  transform: translate(0, 50px);
+}
+.feature-card__image.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 .feature-card__body {
   padding: 30px;
 }
